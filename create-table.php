@@ -8,5 +8,16 @@
   PRIMARY KEY (`id`)
 );";
 
-  mysqli_query($connect, $query);
-  ?>
+  $query = "CREATE TABLE IF NOT EXISTS `books` (
+    `id` int unsigned NOT NULL AUTO_INCREMENT,
+    `name` char(255) NOT NULL,
+    `author` char(50) NOT NULL,
+    `publisher` char(50) NOT NULL,
+    `price` float NOT NULL,
+    `synopsis` char(3000) NOT NULL,
+    `image` char(255) NOT NULL,
+    PRIMARY KEY (`id`)
+  );";
+
+mysqli_query($connect, $query);
+?>

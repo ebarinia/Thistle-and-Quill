@@ -66,8 +66,6 @@ foreach($_SESSION['basket'][$sessionId] as $bookId){
         <h3>Total Amount: £<?php echo $totalAmount; ?></h3>
     </div>
 
-
-    
     <footer>
         <p>© 2023 Thistle & Quill - A bookstore for Scottish authors - All rights reserved.</p>
     </footer>
