@@ -56,14 +56,18 @@ foreach($_SESSION['basket'][$sessionId] as $bookId){
 
     <div class="main-content">
     <h2>Your Basket</h2>
-        <?php foreach($basketItems as $item): ?>
-            <div class="basket-item">
-                <img src="<?php echo $item['image']; ?>" alt="Book Title" class="book-image" style="width: 10%;">
-                <span>£<?php echo $item['price']; ?></span>
-                <a href="basket.php?remove=<?php echo $item['id']; ?>" class="remove-btn">Remove</a>
-            </div>
-        <?php endforeach; ?>
-        <h3>Total Amount: £<?php echo $totalAmount; ?></h3>
+        <?php if(empty($basketItems)): ?>
+            <p>Your basket is empty</p>
+        <?php else: ?>
+            <?php foreach($basketItems as $item): ?>
+                <div class="basket-item">
+                    <img src="<?php echo $item['image']; ?>" alt="Book Title" class="book-image" style="width: 10%;">
+                    <span>£<?php echo $item['price']; ?></span>
+                    <a href="basket.php?remove=<?php echo $item['id']; ?>" class="remove-btn">Remove</a>
+                </div>
+            <?php endforeach; ?>
+            <h3>Total Amount: £<?php echo $totalAmount; ?></h3>
+        <?php endif; ?>
     </div>
 
     <footer>
