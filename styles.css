@@ -1,0 +1,239 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+
+/* Navbar Styles */
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+.navbar {
+    background-color: #f2ece7;
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 4.6rem;
+    position: fixed;
+    top: 0;
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 70%;
+    margin: auto;
+}
+
+.navbar a {
+    color: #e19192;
+    margin-left: 10px;
+}
+
+.navbar a:hover {
+    color: #e4b4ac;
+}
+
+.logo img {
+    width: 150px;
+}
+
+.navbar-btn {
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.account-btn {
+    background-color: #ecccc4;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.account-btn:hover {
+    background-color: #e4b4ac;
+}
+
+.search-form {
+    display: flex;
+    align-items: center;
+}
+.search-input {
+    padding: 5px 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-right: 5px;
+}
+.search-btn {
+    padding: 5px 10px;
+    font-size: 16px;
+    background-color: #e19192;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.search-btn:hover {
+    background-color: #e4b4ac;
+}
+
+/* Main Content Styles */
+.main-content {
+    padding: 20px;
+    margin-left: 15%;
+    margin-right: 15%; 
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+}
+
+.book-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.book-item {
+    background-color: white;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 15px 26px 0 rgba(0, 0, 0, 0.2);
+}
+
+.book-item h3 {
+    color: #003366;
+}
+
+.book-item p {
+    font-size: 14px;
+    color: #666;
+}
+
+/* Book Detail Page Styles */
+.book-detail {
+    display: flex;
+    margin-top: 20px;
+
+    padding: 20px;
+}
+
+.book-cover {
+    max-width: 200px;
+    margin-right: 20px;
+}
+
+.book-info {
+    flex-grow: 1;
+}
+
+.book-info h2 {
+    color: #003366;
+}
+
+.book-info p {
+    color: #666;
+}
+
+/* Basket Page Styles */
+.basket-page {
+    padding: 20px;
+}
+
+.basket-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.basket-item h4 {
+    margin: 0;
+}
+
+.basket-item span {
+    font-weight: bold;
+}
+
+.remove-btn {
+    background-color: #e19192;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.remove-btn:hover {
+    background-color: #e4b4ac;
+}
+
+/* Login and Register Page Styles */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+}
+
+input[type="email"], input[type="password"], input[type="text"] {
+    padding: 5px 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-right: 5px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.login-form {
+    width: 400px;
+    padding: 40px;
+    border-radius: 20px;
+    background-color: white;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
+}
+
+/* Contact Form Page Styles */
+.contact-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+
+.contact-form {
+    width: 700px;
+    padding: 40px;
+    border-radius: 20px;
+    background-color: white;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
+}
+
+textarea {
+    width: 100%;
+    height: 150px;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #f2ece7;
+    color: #e19192;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
