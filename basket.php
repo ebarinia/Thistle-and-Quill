@@ -21,6 +21,13 @@ if(isset($_GET['add'])){
     }
 }
 
+if(isset($_GET['remove'])){
+    $bookId = $_GET['remove'];
+    if(($key = array_search($bookId, $_SESSION['basket'][$sessionId])) !== false) {
+        unset($_SESSION['basket'][$sessionId][$key]);
+    }
+}
+
 $basketItems = array();
 foreach($_SESSION['basket'][$sessionId] as $bookId){
     $sql = "SELECT * FROM books WHERE id = $bookId";
@@ -50,7 +57,7 @@ foreach($_SESSION['basket'][$sessionId] as $bookId){
             <div class="basket-item">
                 <img src="<?php echo $item['image']; ?>" alt="Book Title" class="book-image" style="width: 10%;">
                 <span>£<?php echo $item['price']; ?></span>
-                <button class="remove-btn">Remove</button>
+                <a href="basket.php?remove=<?php echo $item['id']; ?>" class="remove-btn">Remove</a>
             </div>
         <?php endforeach; ?>
     </div>
