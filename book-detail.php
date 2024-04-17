@@ -32,17 +32,17 @@ if(isset($_GET['id'])) {
 
     <div class="main-content">
         <div class="book-detail">
-        <img src="<?php echo $book['image']; ?>" alt="Book Cover" class="book-cover">
-        <div class="book-info">
-            <h2><?php echo $book['name']; ?><br></h2> 
-            <p>by <b><?php echo $book['author']; ?></b></p>
-            <p>Published by <b><?php echo $book['publisher']; ?></b></p>
-            <p>Price: <b>£<?php echo $book['price']; ?></b></p>
-            <p>Synopsis: <?php echo $book['synopsis']; ?></p>
-            <a href="basket.php" class="account-btn">Add to Basket</a>
-            <a href="index.php" class="account-btn">Back</a>
+            <img src="<?php echo $book['image']; ?>" alt="Book Cover" class="book-cover">
+            <div class="book-info">
+                <h2><?php echo $book['name']; ?><br></h2> 
+                <p>by <b><?php echo $book['author']; ?></b></p>
+                <p>Published by <b><?php echo $book['publisher']; ?></b></p>
+                <p>Price: <b>£<?php echo $book['price']; ?></b></p>
+                <p>Synopsis: <?php echo $book['synopsis']; ?></p>
+                <a href="basket.php?add=<?php echo $book['id']; ?>" class="account-btn">Add to Basket</a>
+                <a href="index.php" class="account-btn">Back</a>
+            </div>
         </div>
-</div>
     </div>
 
     <footer>
