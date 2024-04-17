@@ -29,11 +29,14 @@ if(isset($_GET['remove'])){
 }
 
 $basketItems = array();
+$totalAmount = 0;
 foreach($_SESSION['basket'][$sessionId] as $bookId){
     $sql = "SELECT * FROM books WHERE id = $bookId";
     $result = mysqli_query($connect, $sql);
     if (mysqli_num_rows($result) > 0) {
-        $basketItems[] = mysqli_fetch_assoc($result);
+        $item = mysqli_fetch_assoc($result);
+        $basketItems[] = $item;
+        $totalAmount += $item['price'];
     }
 }
 ?>
@@ -60,7 +63,10 @@ foreach($_SESSION['basket'][$sessionId] as $bookId){
                 <a href="basket.php?remove=<?php echo $item['id']; ?>" class="remove-btn">Remove</a>
             </div>
         <?php endforeach; ?>
+        <h3>Total Amount: £<?php echo $totalAmount; ?></h3>
     </div>
+
+
     
     <footer>
         <p>© 2023 Thistle & Quill - A bookstore for Scottish authors - All rights reserved.</p>
