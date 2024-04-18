@@ -6,7 +6,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
+    min-height: 85vh;
 }
 
 /* Navbar Styles */
@@ -91,6 +91,20 @@ a {
 }
 .search-btn:hover {
     background-color: #e4b4ac;
+}
+
+/* Welcome Content Styles */
+.welcome-content {
+    text-align: center;
+}
+
+.welcome-content img {
+    width: 75%;
+}
+
+.welcome-content p {
+    margin-left: 25%;
+    margin-right: 25%;
 }
 
 /* Main Content Styles */

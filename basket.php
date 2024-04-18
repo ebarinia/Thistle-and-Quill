@@ -62,11 +62,13 @@ foreach($_SESSION['basket'][$sessionId] as $bookId){
             <?php foreach($basketItems as $item): ?>
                 <div class="basket-item">
                     <img src="<?php echo $item['image']; ?>" alt="Book Title" class="book-image" style="width: 10%;">
-                    <span>£<?php echo $item['price']; ?></span>
+                    <p><?php echo $item['name']; ?></p>
+                    <span>£<?php echo $item['price']; ?></span><br>
                     <a href="basket.php?remove=<?php echo $item['id']; ?>" class="remove-btn">Remove</a>
                 </div>
             <?php endforeach; ?>
             <h3>Total Amount: £<?php echo $totalAmount; ?></h3>
+            <a class="account-btn">Pay now</a>
         <?php endif; ?>
     </div>
 

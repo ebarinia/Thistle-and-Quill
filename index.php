@@ -23,11 +23,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     ?>
 
     <main class="main-content">
-        <br><br><h1>Hi <?php echo htmlspecialchars($_SESSION["name"]); ?> and welcome to Thistle & Quill</h1>
-        <p>The premier online destination where the rich tapestry of Scotland’s literary heritage is celebrated and shared with the world. <br>
-        Here, you'll discover an exquisite collection of books penned by Scotland's finest authors, from time-honored classics to contemporary masterpieces. <br>
-        Each book is a portal to the lush landscapes, deep-rooted traditions, and vibrant stories that make Scotland uniquely enchanting. <br>
-        Whether you are a devoted bibliophile or a curious newcomer, Thistle & Quill invites you to explore and connect with the spirit of Scotland through every page.</p><br><br>
+        <br><br><h1>Hi <?php echo htmlspecialchars($_SESSION["name"]); ?></h1>
         
         <h2>New Releases</h2>
         <section class="book-list">

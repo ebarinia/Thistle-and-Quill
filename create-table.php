@@ -22,12 +22,10 @@ CREATE TABLE IF NOT EXISTS `books` (
 );";
 
 mysqli_query($connect, $query_users);
-
 mysqli_query($connect, $query_books);
 
 $result = mysqli_query($connect, "SELECT COUNT(*) AS total FROM `books`");
 $data = mysqli_fetch_assoc($result);
-
 if ($data['total'] == 0) {
     $seed_books = "
     INSERT INTO `books` (`id`, `name`, `author`, `publisher`, `price`, `synopsis`, `image`) VALUES
@@ -45,7 +43,8 @@ if ($data['total'] == 0) {
     (14, 'Spies', 'Michael Frayn', 'Faber & Faber', 8.64, 'In the quiet cul-de-sac where Keith and Stephen live the only immediate signs of the Second World War are the blackout at night and a single random bombsite. But the two boys start to suspect all is not as it seems when one day Keith announces a disconcerting discovery: the Germans have infiltrated his own family. And when the secret underground world they have dreamed up emerges from the shadows they find themselves engulfed in mysteries far deeper and more painful than they had bargained for.', 'https://m.media-amazon.com/images/I/71Y1zhixucL._SL1500_.jpg'),
     (15, 'Feminine Gospels', ' Professor Carol Ann Duffy DBE', 'Picador', 9.19, 'In Feminine Gospels, Carol Ann Duffy draws on the historical, the archetypal, the biblical and the fantastical to create various visions – and revisions – of female identity. Simultaneously stripping women bare and revealing them in all their guises and disguises, these poems tell tall stories as though they were true confessions, and spin modern myths from real women seen in every aspect – as bodies and corpses, writers and workers, shoppers and slimmers, fairytale royals or girls-next-door.', 'https://m.media-amazon.com/images/I/810Grb556zL._SL1500_.jpg'),
     (16, 'And Still I Rise', 'Maya Angelou', 'Virago Press Ltd', 6.58, 'Maya Angelou\'s poetry - lyrical and dramatic, exuberant and playful - speaks of love, longing, partings; of Saturday night partying, and the smells and sounds of Southern cities; of freedom and shattered dreams.', 'https://m.media-amazon.com/images/I/91TbIMRUiNL._SL1500_.jpg'),
-    (17, 'The Golden Treasury of Scottish Verse', 'Kathleen Jamie', 'Canongate Books', 17.04, 'The Golden Treasury of Scottish Verse is a timeless collection of Scottish poetry. It contains over three hundred poems ranging from the early medieval period to the twenty-first century, and paints a full-colour portrait of Scotland\'s poetic heritage and culture.\r\n\r\nEdited and introduced by award-winning poets Kathleen Jamie, Don Paterson and Peter Mackay, and including poems by Robert Burns, Carol Ann Duffy, Sorley MacLean, Violet Jacob, William Dunbar, Meg Bateman, George Mackay Brown, Màiri Mhòr nan Òran, Robert Louis Stevenson, Jackie Kay, Liz Lochhead and many more, The Golden Treasury of Scottish Verse is a joyous celebration of Scotland\'s literary past, present and future.', 'https://m.media-amazon.com/images/I/91thn7NPlIL._SL1500_.jpg');
+    (17, 'The Golden Treasury of Scottish Verse', 'Kathleen Jamie', 'Canongate Books', 17.04, 'The Golden Treasury of Scottish Verse is a timeless collection of Scottish poetry. It contains over three hundred poems ranging from the early medieval period to the twenty-first century, and paints a full-colour portrait of Scotland\'s poetic heritage and culture.\r\n\r\nEdited and introduced by award-winning poets Kathleen Jamie, Don Paterson and Peter Mackay, and including poems by Robert Burns, Carol Ann Duffy, Sorley MacLean, Violet Jacob, William Dunbar, Meg Bateman, George Mackay Brown, Màiri Mhòr nan Òran, Robert Louis Stevenson, Jackie Kay, Liz Lochhead and many more, The Golden Treasury of Scottish Verse is a joyous celebration of Scotland\'s literary past, present and future.', 'https://m.media-amazon.com/images/I/91thn7NPlIL._SL1500_.jpg'),
+    (18, 'Fauverie', 'Pascale Petit', 'Seren', 9.19, 'The Fauverie of this book is the big-cat house in the Jardin des Plantes zoo. But the word also evokes the Fauves, primitive painters who used raw colour straight from the tube. Like The Zoo Father, Petit s acclaimed second collection, this volume has childhood trauma and a dying father at its heart, while Paris takes centre stage a city savage as the Amazon, haunted by Aramis the black jaguar and a menagerie of wild animals. Transforming childhood horrors to ultimately mourn a lost parent, Fauverie redeems the darker forces of human nature while celebrating the ferocity and grace of endangered species.', 'https://m.media-amazon.com/images/I/61ho6Algn2L._SL1000_.jpg');
     ";
       mysqli_query($connect, $seed_books);
   }
