@@ -21,6 +21,14 @@ CREATE TABLE IF NOT EXISTS `books` (
   PRIMARY KEY (`id`)
 );";
 
+// CREATE TABLE contacts (
+//   id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+//   name VARCHAR(50) NOT NULL UNIQUE,
+//   email VARCHAR(50) NOT NULL,
+//   message TEXT NOT NULL,
+//   created_at DATETIME DEFAULT CURRENT_TIMESTAMP
+// );
+
 mysqli_query($connect, $query_users);
 mysqli_query($connect, $query_books);
 
