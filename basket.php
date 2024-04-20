@@ -67,8 +67,10 @@ foreach($_SESSION['basket'][$sessionId] as $bookId){
                     <a href="basket.php?remove=<?php echo $item['id']; ?>" class="remove-btn">Remove</a>
                 </div>
             <?php endforeach; ?>
-            <h3>Total Amount: £<?php echo $totalAmount; ?></h3>
-            <a class="account-btn">Pay now</a>
+            <div class="payment-section">
+                <h3>Total: £<?php echo $totalAmount; ?></h3>
+                <a class="account-btn">Pay now</a>
+            </div>
         <?php endif; ?>
     </div>
 
