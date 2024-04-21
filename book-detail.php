@@ -1,6 +1,13 @@
 <?php
 include 'connect.php';
 
+session_start();
+ 
+if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
+    header("location: login.php");
+    exit;
+}
+
 if(isset($_GET['id'])) {
     $id = $_GET['id'];
     $sql = "SELECT * FROM books WHERE id = $id";

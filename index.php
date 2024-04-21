@@ -25,7 +25,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     <main class="main-content">
         <br><br><h1>Hi <?php echo htmlspecialchars($_SESSION["name"]); ?></h1>
         
-        <h2>New Releases</h2>
+        <h2>Our Monthly Selection:</h2>
         <section class="book-list">
             <?php
             $sql = "SELECT * FROM books";
