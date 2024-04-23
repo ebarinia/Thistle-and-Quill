@@ -34,7 +34,7 @@ if(isset($_GET['id'])) {
 </head>
 <body>
     <?php
-    include 'navbar.php';
+    include 'navbar.html';
     ?>
 
     <div class="main-content">

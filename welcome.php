@@ -8,7 +8,7 @@
 </head>
 <body>
     <?php
-    include 'navbar.php';
+    include 'navbar.html';
     ?>
 
     <main class="welcome-content">

@@ -85,7 +85,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 </head>
 <body>
     <?php
-    include 'navbar.php';
+    include 'navbar.html';
     ?>
 
     <div class="login-container">
