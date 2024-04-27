@@ -17,7 +17,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 </head>
 <body>
     <?php
-    include 'navbar.html';
+    include 'navbar.php';
     ?>
 
     <main class="welcome-content">

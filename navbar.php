@@ -16,6 +16,5 @@
             <input type="text" name="search" class="search-input" placeholder="Search...">
             <button type="submit" class="search-btn">Search</button>
         </form>
-        
     </div>
 </nav>

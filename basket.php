@@ -51,7 +51,7 @@ foreach($_SESSION['basket'][$sessionId] as $bookId){
 </head>
 <body>
     <?php
-    include 'navbar.html';
+    include 'navbar.php';
     ?>
 
     <div class="main-content">

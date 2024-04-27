@@ -59,7 +59,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
     </head>
 <body>
     <?php
-    include 'navbar.html';
+    include 'navbar.php';
     ?>
 
     <div class="contact-content">
