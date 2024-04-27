@@ -1,9 +1,10 @@
 <nav class="navbar">
     <div class="navbar-container">
         <div class="logo">
-            <a href="index.php"><img src="img/logo.png" alt="Thistle & Quill" class="logo-img"></a>
+            <a href="welcome.php"><img src="img/logo.png" alt="Thistle & Quill" class="logo-img"></a>
         </div>
         <div>
+            <a href="index.php" class="navbar-btn">Home</a>
             <a href="basket.php" class="navbar-btn">Basket</a>
             <a href="contact.php" class="navbar-btn">Contact</a>
             <?php if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true): ?>

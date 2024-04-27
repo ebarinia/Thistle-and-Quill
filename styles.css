@@ -31,13 +31,15 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 70%;
+    width: 80%;
     margin: auto;
 }
 
 .navbar a {
     color: #e19192;
-    margin-left: 10px;
+    margin-left: 70px;
+    font-size: 18px;
+    /* font-weight: bold; */
 }
 
 .navbar a:hover {
