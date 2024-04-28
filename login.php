@@ -42,14 +42,14 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                             
                             header("location: index.php");
                         } else{
-                            $login_err = "Invalid email or password.";
+                            $login_err = "Invalid email or password";
                         }
                     }
                 } else{
-                    $login_err = "Invalid email or password.";
+                    $login_err = "Invalid email or password";
                 }
             } else{
-                echo "Oops! Something went wrong. Please try again later.";
+                echo "Oops! Something went wrong. Please try again later";
             }
             mysqli_stmt_close($stmt);
         }
@@ -72,19 +72,20 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     ?>
 
     <div class="login-container">
-        <?php 
-        if(!empty($login_err)){
-            echo '<div class="alert alert-danger">' . $login_err . '</div>';
-        }        
-        ?>
+        
 
         <form class="login-form" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
             <label for="email">Email Address:</label><br>
             <input type="text" id="email" name="email" value="<?php echo $email; ?>" placeholder="Enter your email address"><br><br>
             <label for="password">Password:</label><br>
             <input type="password" id="password" name="password" placeholder="Enter your password" required><br><br>
-            <button type="submit" class="account-btn">Login</button>
+            <button type="submit" class="account-btn">Login</button><br>
             <p>Not registered? <a href="register.php" style="text-decoration: underline;">CREATE AN ACCOUNT</a></p>
+            <?php 
+            if(!empty($login_err)){
+                echo '<div class="error-message">' . $login_err . '</div>';
+            }        
+            ?>
         </form>
         
     </div>
